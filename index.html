@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Polenlyn Solutions</title>
+
+    <!-- Tailwind via CDN for fast iteration -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Optional: quick theme tweak — edit brand color here
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: { DEFAULT: '#2563eb', dark: '#1e40af' },
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="antialiased text-gray-800 bg-white">
+    <!-- ===================== NAVBAR ===================== -->
+    <header id="site-header" class="fixed inset-x-0 top-0 z-50 border-b bg-white/80 backdrop-blur">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between">
+          <!-- Brand -->
+          <a href="#home" class="flex items-center gap-3" aria-label="Go to home">
+            <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-brand text-white font-bold">PS</span>
+            <span class="text-lg font-bold text-gray-900 tracking-tight">Polenlyn Solutions</span>
+          </a>
+
+          <!-- Desktop Nav -->
+          <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+            <a href="#about" class="text-gray-600 hover:text-brand">About</a>
+            <a href="#services" class="text-gray-600 hover:text-brand">Services</a>
+            <a href="#clients" class="text-gray-600 hover:text-brand">Clients</a>
+            <a href="#portfolio" class="text-gray-600 hover:text-brand">Portfolio</a>
+            <a href="#contact" class="text-gray-600 hover:text-brand">Contact</a>
+            <a href="#contact" class="inline-flex items-center rounded-lg bg-brand px-4 py-2 font-semibold text-white hover:bg-brand-dark transition">Get a Quote</a>
+          </nav>
+
+          <!-- Mobile Menu Button -->
+          <button id="menuBtn" class="md:hidden inline-flex items-center justify-center rounded-lg p-2 text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-brand" aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle navigation">
+            <svg id="icon-menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Nav -->
+      <div id="mobile-menu" class="md:hidden hidden border-t bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="py-3 space-y-1 text-base font-medium">
+            <a href="#about" class="block rounded-lg px-3 py-2 text-gray-700 hover:bg-gray-100">About</a>
+            <a href="#services" class="block rounded-lg px-3 py-2 text-gray-700 hover:bg-gray-100">Services</a>
+            <a href="#clients" class="block rounded-lg px-3 py-2 text-gray-700 hover:bg-gray-100">Clients</a>
+            <a href="#portfolio" class="block rounded-lg px-3 py-2 text-gray-700 hover:bg-gray-100">Portfolio</a>
+            <a href="#contact" class="block rounded-lg px-3 py-2 text-gray-700 hover:bg-gray-100">Contact</a>
+            <a href="#contact" class="mt-1 inline-flex w-full items-center justify-center rounded-lg bg-brand px-4 py-2 font-semibold text-white hover:bg-brand-dark">Get a Quote</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===================== PAGE SPACER ===================== -->
+    <main class="pt-16">
+      <!-- ===================== HERO SECTION ===================== -->
+      <section id="home" class="relative min-h-screen flex items-center justify-center bg-gradient-to-r from-brand to-brand-dark text-white overflow-hidden">
+        <!-- Background image overlay -->
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1508780709619-79562169bc64?auto=format&fit=crop&w=1600&q=80')] bg-cover bg-center opacity-20"></div>
+
+        <div class="relative z-10 text-center max-w-3xl px-6 space-y-6">
+          <!-- Headline -->
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight opacity-0 translate-y-8 animate-fade-up">
+            Custom Digital Solutions for Your Business
+          </h1>
+
+          <!-- Description -->
+          <p class="text-lg sm:text-xl text-gray-100 opacity-0 translate-y-8 animate-fade-up delay-200">
+            We design and develop websites and web applications tailored to your business needs, delivering solutions that are reliable, efficient, and easy to manage.
+          </p>
+
+          <!-- CTA Button -->
+          <a href="#contact" class="inline-block px-8 py-4 bg-white text-brand font-semibold rounded-xl shadow-lg hover:bg-gray-100 transition opacity-0 translate-y-8 animate-fade-up delay-400">
+            Let’s Build Your Site
+          </a>
+        </div>
+      </section>
+
+<!-- ===================== Tailwind Animations ===================== -->
+<style>
+  @keyframes fadeUp {
+    0% { opacity: 0; transform: translateY(2rem); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-up { animation: fadeUp 0.8s forwards; }
+  .delay-200 { animation-delay: 0.2s; }
+  .delay-400 { animation-delay: 0.4s; }
+</style>
+
+      <!-- ===================== ABOUT SECTION ===================== -->
+      <section id="about" class="scroll-mt-24 py-24">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+          <h2 class="text-3xl font-bold mb-6">About Us</h2>
+          <p class="text-gray-600 leading-relaxed max-w-3xl mx-auto">We are a passionate team of developers and IT professionals helping businesses create modern, scalable, and effective digital solutions. From responsive websites to powerful web applications, we deliver results that make an impact.</p>
+        </div>
+      </section>
+
+      <!-- ===================== SERVICES SECTION ===================== -->
+      <section id="services" class="scroll-mt-24 py-24 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+          <h2 class="text-3xl font-bold mb-12">Our Services</h2>
+          <div class="grid gap-8 md:grid-cols-3">
+            
+            <!-- Service 1: Websites -->
+            <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 hover:scale-105">
+              <!-- Globe / Browser -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto text-brand mb-4 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4a8 8 0 100 16 8 8 0 000-16zm0 0c1.657 0 3 .895 3 2s-1.343 2-3 2-3 .895-3 2 .895 2 3 2 3 .895 3 2-1.343 2-3 2" />
+              </svg>
+              <h3 class="text-xl font-semibold mb-2">Websites</h3>
+              <p class="text-gray-600">Custom business websites that are modern, mobile-friendly, and easy to manage.</p>
+            </div>
+
+            <!-- Service 2: Apps -->
+            <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 hover:scale-105">
+              <!-- Mobile Device -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto text-brand mb-4 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4h10a1 1 0 011 1v14a1 1 0 01-1 1H7a1 1 0 01-1-1V5a1 1 0 011-1z" />
+              </svg>
+              <h3 class="text-xl font-semibold mb-2">Apps</h3>
+              <p class="text-gray-600">Custom web applications designed to streamline your business processes and operations.</p>
+            </div>
+
+            <!-- Service 3: IT Setup -->
+            <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition transform hover:-translate-y-1 hover:scale-105">
+              <!-- Server / Network -->
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto text-brand mb-4 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16M8 6v12M16 6v12" />
+              </svg>
+              <h3 class="text-xl font-semibold mb-2">IT Setup</h3>
+              <p class="text-gray-600">Complete IT support—from domains and business email to networking and system setup.</p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== CLIENTS SECTION ===================== -->
+      <section id="clients" class="scroll-mt-24 py-20">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+          <h2 class="text-3xl font-bold mb-12">Our Clients</h2>
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 items-center">
+            <div class="flex items-center justify-center p-4">
+              <img src="images/Maroon-Studios.png" alt="Client 1" class="h-24 object-contain" />
+            </div>
+            <div class="flex items-center justify-center p-4">
+              <img src="images/capcsi.webp" alt="Client 2" class="h-24 object-contain" />
+            </div>
+            <div class="flex items-center justify-center p-4">
+              <img src="images/JTEC.png" alt="Client 3" class="h-24 object-contain scale-140" />
+            </div>
+            <div class="flex items-center justify-center p-4">
+              <img src="https://dummyimage.com/120x60/ddd/333.png&text=Client+4" alt="Client 4" class="h-12 object-contain" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== PORTFOLIO SECTION ===================== -->
+      <section id="portfolio" class="scroll-mt-24 py-24 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+          <h2 class="text-3xl font-bold mb-12">Our Work</h2>
+          <div class="grid gap-8 md:grid-cols-3">
+            <div class="bg-white rounded-xl shadow hover:shadow-lg overflow-hidden">
+              <img src="https://dummyimage.com/600x400/ddd/333.png&text=Project+1" alt="Project 1" class="w-full h-48 object-cover">
+              <div class="p-6 text-left">
+                <h3 class="text-xl font-semibold mb-2">Project One</h3>
+                <p class="text-gray-600 text-sm">Description of the project, what was done, and the result.</p>
+              </div>
+            </div>
+            <div class="bg-white rounded-xl shadow hover:shadow-lg overflow-hidden">
+              <img src="https://dummyimage.com/600x400/ddd/333.png&text=Project+2" alt="Project 2" class="w-full h-48 object-cover">
+              <div class="p-6 text-left">
+                <h3 class="text-xl font-semibold mb-2">Project Two</h3>
+                <p class="text-gray-600 text-sm">Description of the project, what was done, and the result.</p>
+              </div>
+            </div>
+            <div class="bg-white rounded-xl shadow hover:shadow-lg overflow-hidden">
+              <img src="https://dummyimage.com/600x400/ddd/333.png&text=Project+3" alt="Project 3" class="w-full h-48 object-cover">
+              <div class="p-6 text-left">
+                <h3 class="text-xl font-semibold mb-2">Project Three</h3>
+                <p class="text-gray-600 text-sm">Description of the project, what was done, and the result.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== CONTACT SECTION ===================== -->
+      <section id="contact" class="scroll-mt-24 py-24">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+          <h2 class="text-3xl font-bold mb-6">Get in Touch</h2>
+          <p class="text-gray-600 mb-12">Have a project in mind? Let's build something great together.</p>
+
+          <form action="#" method="POST" class="grid gap-6 text-left">
+            <div>
+              <label class="block text-sm font-medium text-gray-700">Name</label>
+              <input type="text" class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-brand focus:ring-brand" placeholder="Your Name" required>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700">Email</label>
+              <input type="email" class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-brand focus:ring-brand" placeholder="you@example.com" required>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-700">Message</label>
+              <textarea rows="4" class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-brand focus:ring-brand" placeholder="Tell us about your project..." required></textarea>
+            </div>
+            <button type="submit" class="inline-flex justify-center rounded-lg bg-brand px-6 py-3 font-semibold text-white hover:bg-brand-dark transition">Send Message</button>
+          </form>
+
+          <div class="mt-12 text-gray-600">
+            <p>Email: <a href="mailto:hello@yourcompany.com" class="text-brand hover:underline">hello@yourcompany.com</a></p>
+            <p class="mt-2">Phone: +63 900 000 0000</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="border-t bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-sm text-gray-500 flex flex-col md:flex-row md:justify-between md:items-center gap-4">
+        <p>© <span id="year"></span> YourCompany. All rights reserved.</p>
+        <div class="flex gap-6">
+          <a href="#" class="hover:text-brand">Facebook</a>
+          <a href="#" class="hover:text-brand">LinkedIn</a>
+          <a href="#" class="hover:text-brand">GitHub</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Tiny JS helpers: mobile menu toggle + header shadow + current year -->
+    <script>
+      const btn = document.getElementById('menuBtn');
+      const menu = document.getElementById('mobile-menu');
+      const header = document.getElementById('site-header');
+
+      btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+      });
+
+      const onScroll = () => {
+        if (window.scrollY > 8) header.classList.add('shadow');
+        else header.classList.remove('shadow');
+      };
+      window.addEventListener('scroll', onScroll);
+      onScroll();
+
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
